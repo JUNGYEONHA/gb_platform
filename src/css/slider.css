@@ -1,0 +1,21 @@
+/* 
+.axis {
+  transform: translate(0, -7);
+  fill: none;
+  font-size: 10;
+  font-family: sans-serif;
+  text-anchor: middle;
+} */
+
+.axis text,
+.slider text {
+  font-size: 11px;
+}
+.axis text {
+  fill: rgb(61, 53, 53);
+}
+.slider text {
+  fill: green;
+}
+
+
