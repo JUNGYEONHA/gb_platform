@@ -20,8 +20,7 @@ import { feature } from 'topojson-client';
 const korgeoData = feature(kor, kor.objects.korea_WSG84);
 const geoData = feature(gb, gb.objects.gbmap);
 
-const Ol_Echar_flow = () => {
-
+export const Ol_Echar_flow = () => {
 
   var geoCoordMap = {
     '上海': [121.4648, 31.2891],
@@ -330,7 +329,7 @@ const Ol_Echar_flow = () => {
           [128.5055956, 36.5760207], //[경도, 위도] 값 설정 -> 경상북도청기준으로 설정
           getProjection("EPSG:3857")
         ),
-        zoom: 6
+        zoom: 5
       })
     });
 
@@ -358,10 +357,9 @@ const Ol_Echar_flow = () => {
     echartslayer.appendTo(map);
   }, []);
 
-  return <div id="OdMap" style={{height: "700px"}}></div>;
+  return <div id="OdMap" style={{height: "450px", width: "600px"}}></div>;
 };
 
-export default Ol_Echar_flow;
 
 
 
