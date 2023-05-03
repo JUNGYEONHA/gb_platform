@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { Aside, Header, Content } from "../layouts";
 /**
@@ -11,16 +11,17 @@ const StyledLayoutDiv = styled.div`
   grid-column-start: 2;
   display: grid;
   grid-template-columns: 100px minmax(100px, 1fr);
-  grid-template-rows: 80px 1fr;
+  grid-template-rows: 50px 1fr;
 `;
 
 
 export const Layout = () => {
+  const [currentTab, setClickTab] = useState(0);
   return (
-    <StyledLayoutDiv className="main">
+    <StyledLayoutDiv>
       <Aside></Aside>
-      <Header></Header>
-      <Content/>
+      <Header setClickTab={setClickTab} test="1"></Header>
+      <Content currentTab={currentTab}/>
     </StyledLayoutDiv>
   );
 };
