@@ -16,7 +16,7 @@ import TileLayer from 'ol/layer/Tile';
 import 'ol/ol.css';
 import EChartsLayer from 'ol-echarts';
 
-const Ol_Echarts = () => {
+const Ol_Echarts = (prop) => {
 
   useEffect(() => {
     const map  = new Map({
@@ -36,17 +36,16 @@ const Ol_Echarts = () => {
     })
 
     var echartslayer = new EChartsLayer();
-    console.log(echartslayer);
     echartslayer.appendTo(map);
 
 
   }, []);
   return (
     <>
-      <div id="MMap" style={{height: "600px"}}></div>
+      <div id="MMap" style={{width: prop.width, height: prop.height}}></div>
     </>      
 
     );
     // return <EChartsLayer option={option}/>
 }
-export default Ol_Echarts;
+export {Ol_Echarts};

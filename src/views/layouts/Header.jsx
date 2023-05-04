@@ -7,7 +7,7 @@ import { TabCont } from '../component/TabCont';
  * styled-components 및 styled interface 정의 영역
  */
 const StyledHeader = styled.div`
-    background-color: ivory;
+    // background-color: ivory;
     padding: 8px 16px 8px 16px;
     display: flex;
     justify-content: space-between;
@@ -15,7 +15,7 @@ const StyledHeader = styled.div`
     justify-content: space-between;
 `;
 const TabMenu = styled.ul`
-  color: rgb(232, 234, 237);
+  color: #777;
   font-weight: bold;
   display: flex;
   flex-direction: row;
@@ -36,8 +36,9 @@ const TabMenu = styled.ul`
   }
 
   .focused {
-    background-color: rgb(255,255,255);
-    color: rgb(21,20,20);
+    background-color: #3339c7;
+    color: #fff;
+    border-bottom : unset;
   }
 
   & div.desc {
