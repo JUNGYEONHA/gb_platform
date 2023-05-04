@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ReactECharts from 'echarts-for-react';
 
-const Radar = () => {
+const Radar = (prop) => {
   const option = {
     title: {
       text: '제목'
@@ -60,11 +60,11 @@ const Radar = () => {
 
   return <ReactECharts
     option={option}
-    style={{ height: 400, borderBottom:"3px solid #000" }}
+    style={{width: prop.width, height: prop.height}}
     onChartReady={onChartReady}
     loadingOption={loadingOption}
     showLoading={true}
   />;
 };
 
-export default Radar;
+export {Radar};

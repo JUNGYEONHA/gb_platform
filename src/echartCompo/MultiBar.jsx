@@ -1,7 +1,7 @@
 import React from "react";
 import ReactECharts from 'echarts-for-react';    
 
-const MultiBar = () => {
+const MultiBar = (prop) => {
   const option = {
     legend: {},
     tooltip: {},
@@ -34,7 +34,8 @@ const MultiBar = () => {
   }
   return <ReactECharts
     option={option}
+    style={{width: prop.width, height: prop.height}}
   />;
 };
 
-export default MultiBar;
+export {MultiBar};
