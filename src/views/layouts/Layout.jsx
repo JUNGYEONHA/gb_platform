@@ -6,11 +6,11 @@ import { Aside, Header, Content } from "../layouts";
  */
 
 const StyledLayoutDiv = styled.div`
-  width:100vw;
+  // width:100vw;
   height:100vh;
   grid-column-start: 2;
   display: grid;
-  grid-template-columns: 100px minmax(100px, 1fr);
+  grid-template-columns: 80px minmax(100px, 1fr);
   grid-template-rows: 50px 1fr;
 `;
 

@@ -8,7 +8,6 @@ const StyledAside = styled.div`
   background-color:#e4dfff;
   min-height:100vh;
   grid-row: span 2;
-  width:100px;
 `;
 
 const Menu = styled.ul`
@@ -17,7 +16,7 @@ const Menu = styled.ul`
 
   .menuLi {
     height:70px;
-    border:1px solid #999;
+    border-bottom:1px solid #999;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -34,6 +33,9 @@ export const Aside = () => {
         <li className="menuLi">2</li>
         <li className="menuLi">3</li>
         <li className="menuLi">4</li>
+        <li className="menuLi">5</li>
+        <li className="menuLi">5</li>
+        <li className="menuLi">5</li>
         <li className="menuLi">5</li>
       </Menu>
     </StyledAside>

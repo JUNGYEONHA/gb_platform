@@ -7,15 +7,17 @@ import {Card} from './Card'
 
 // Styled-Component 라이브러리를 활용해 TabMenu 와 Desc 컴포넌트의 CSS를 구현.
 
-const Desc = styled.div`
-  text-align: center;
-
-`;
+// const Desc = styled.div`
+//   text-align: center;
+//   padding:15px;
+//   background:#fff;
+// `;
 
 export const TabCont = (prop) => {
   const [tabCont, SetTabCont] = useState();
 
   useEffect(() =>{
+    
     switch(prop.val){
       case 0 : 
         SetTabCont(<InOutFlow/>)
@@ -30,11 +32,9 @@ export const TabCont = (prop) => {
   }, [prop])
 
   return (
-    <div>
-      <Desc>
-        {/* <p>{menuArr[currentTab].val}</p> */}
-        {tabCont}
-      </Desc>
-    </div>
+    <>
+      {/* <p>{menuArr[currentTab].val}</p> */}
+      {tabCont}
+    </>
   );
 };

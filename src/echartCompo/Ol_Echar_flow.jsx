@@ -20,7 +20,8 @@ import { feature } from 'topojson-client';
 const korgeoData = feature(kor, kor.objects.korea_WSG84);
 const geoData = feature(gb, gb.objects.gbmap);
 
-export const Ol_Echar_flow = () => {
+export const Ol_Echar_flow = (prop) => {
+  console.log('click')
 
   var geoCoordMap = {
     '上海': [121.4648, 31.2891],
@@ -357,7 +358,7 @@ export const Ol_Echar_flow = () => {
     echartslayer.appendTo(map);
   }, []);
 
-  return <div id="OdMap" style={{height: "450px", width: "600px"}}></div>;
+  return <div id="OdMap" style={{width: prop.width, height: prop.height}}></div>;
 };
 
 
