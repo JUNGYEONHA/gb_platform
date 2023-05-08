@@ -14,6 +14,11 @@ export const Line = (prop) => {
 	  yAxis: {
 	    type: 'value'
 	  },
+	  toolbox: {
+		feature: {
+		  saveAsImage: {}
+		}
+	  },
 	  series: [
 	    {
 	      data: [150, 230, 224, 218, 135, 147, 260],

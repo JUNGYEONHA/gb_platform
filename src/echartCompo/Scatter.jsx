@@ -6,6 +6,11 @@ const Scatter = (prop) => {
   const options = {
     xAxis: {},
     yAxis: {},
+    toolbox: {
+      feature: {
+        saveAsImage: {}
+      }
+    },
     series: [
       {
         symbolSize: 20,

@@ -7,6 +7,11 @@ export const Bar = (prop) => {
       text: '제목'
     },
     tooltip: {},
+    toolbox: {
+      feature: {
+        saveAsImage: {}
+      }
+    },
     legend: {
       data:['홈런개수']
     },

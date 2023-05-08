@@ -7,13 +7,12 @@ import { Aside, Header, Content } from "../layouts";
 
 const StyledLayoutDiv = styled.div`
   // width:100vw;
-  height:100vh;
+  height: 100vh;
   grid-column-start: 2;
   display: grid;
   grid-template-columns: 80px minmax(100px, 1fr);
   grid-template-rows: 50px 1fr;
 `;
-
 
 export const Layout = () => {
   const [currentTab, setClickTab] = useState(0);
@@ -21,7 +20,7 @@ export const Layout = () => {
     <StyledLayoutDiv>
       <Aside></Aside>
       <Header setClickTab={setClickTab} test="1"></Header>
-      <Content currentTab={currentTab}/>
+      <Content currentTab={currentTab} />
     </StyledLayoutDiv>
   );
 };

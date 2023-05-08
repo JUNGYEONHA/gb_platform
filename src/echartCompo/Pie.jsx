@@ -8,6 +8,11 @@ const Pie = (prop) => {
       subtext: '부제목',
       x:'center'
     },
+    toolbox: {
+      feature: {
+        saveAsImage: {}
+      }
+    },
     tooltip : {
       trigger: 'item',
       formatter: "{a} <br/>{b} : {c} ({d}%)"
