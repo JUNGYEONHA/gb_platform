@@ -1,13 +1,13 @@
-import './App.css';
-import MapNchart from './MapNchart';
-import { Layout } from "./views/layouts";
-import { FootTraffic } from "./views/pages/FootTraffic";
+import "./App.css";
+import MapNchart from "./MapNchart";
+import { Layout } from "./components/layouts";
+import { FootTraffic } from "./pages/FootTraffic";
 import { GlobalStyle, GlobalFonts, GlobalOverrideStyle } from "./styles";
 function App() {
   return (
     <>
-      <GlobalStyle/>
-      <Layout/>
+      <GlobalStyle />
+      <Layout />
       {/* <MapNchart/> */}
     </>
   );
