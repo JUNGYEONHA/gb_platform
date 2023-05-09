@@ -14,15 +14,15 @@ import Stroke from "ol/style/Stroke.js";
 import Style from "ol/style/Style.js";
 import gb from "data/gbmap_topo.json";
 import kor from "data/koreaTopo2.json"; //national
+import data1 from "data/경북 시군구.json";
+import data2 from "data/경북 읍면동.json";
 
 import { feature } from "topojson-client";
 
-const korgeoData = feature(kor, kor.objects.korea_WSG84);
+// const korgeoData = feature(kor, kor.objects.korea_WSG84);
 const geoData = feature(gb, gb.objects.gbmap);
 
 export const Ol_Echar_flow = (prop) => {
-  console.log("click");
-
   var geoCoordMap = {
     上海: [121.4648, 31.2891],
     东莞: [113.8953, 22.901],
@@ -276,7 +276,7 @@ export const Ol_Echar_flow = (prop) => {
     );
   });
   useEffect(() => {
-    const geoCoordMap_test = korgeoData.features.map(function (obj) {
+    const geoCoordMap_test = data1.features.map(function (obj) {
       const rObj = obj.properties;
       const newO = new Object();
       // newO.ENM= rObj.
@@ -286,7 +286,7 @@ export const Ol_Echar_flow = (prop) => {
       // console.log(newO);
       return rObj;
     });
-    const geojsonUrl = korgeoData;
+    const geojsonUrl = data1;
     const baseLayer = new TileLayer({
       preload: 4,
       source: new OSM(),
