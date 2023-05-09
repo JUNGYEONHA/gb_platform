@@ -2,8 +2,7 @@ import React from "react";
 import { useState } from "react";
 import styled from "styled-components";
 import { TabCont } from "pages/유동인구/pages/TabCont";
-import data1 from "data/경북 시군구.json";
-import data2 from "data/경북 읍면동.json";
+import { SearchAreaInput } from "components/input/SearchAreaInput";
 
 /**
  * styled-components 및 styled interface 정의 영역
@@ -60,14 +59,7 @@ export const Header = (props) => {
   };
   return (
     <StyledHeader>
-      <div>
-        <input type="search" placeholder="대상지 검색" />
-        <select>
-          {data1.features.map((el, index) => (
-            <option>{el.properties.SIG_KOR_NM}</option>
-          ))}
-        </select>
-      </div>
+      <SearchAreaInput />
       <TabMenu>
         {menuArr.map((el, index) => (
           <li
